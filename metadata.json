@@ -1,0 +1,6 @@
+{
+  "name": "CozyPrompt AI",
+  "description": "A beautiful mobile-first repository of hand-picked AI prompts with advanced categorization, favorites, and detailed views.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+@layer utilities {
+  /* Scrollbar removal utilities */
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-none {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* Elite Light Theme Overrides */
+.theme-light {
+  /* Core variables or fallback override styling */
+  background-color: #fafaf9 !important; /* stone-50 */
+  color: #1c1917 !important; /* stone-900 */
+}
+
+/* Target internal containers and panels when in light mode */
+.theme-light .bg-slate-950,
+.theme-light .bg-black {
+  background-color: #fafaf9 !important;
+}
+
+.theme-light .text-slate-100,
+.theme-light .text-white {
+  color: #1c1917 !important;
+}
+
+.theme-light .text-slate-300,
+.theme-light .text-slate-400 {
+  color: #57524e !important; /* stone-600 */
+}
+
+.theme-light .text-slate-500 {
+  color: #78716c !important; /* stone-500 */
+}
+
+.theme-light .bg-slate-900,
+.theme-light .bg-slate-900\/60,
+.theme-light .bg-slate-900\/40,
+.theme-light .bg-slate-900\/20,
+.theme-light .bg-slate-900\/30,
+.theme-light .bg-slate-950\/50,
+.theme-light .bg-slate-950\/80 {
+  background-color: #ffffff !important; /* white paper cards */
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05) !important;
+}
+
+.theme-light .border-slate-800,
+.theme-light .border-slate-900,
+.theme-light .border-slate-900\/40,
+.theme-light .border-slate-800\/80,
+.theme-light .border-slate-900\/30,
+.theme-light .border-slate-800\/40,
+.theme-light .border-slate-800\/60 {
+  border-color: #e7e5e4 !important; /* stone-200 border */
+}
+
+.theme-light input {
+  background-color: #f5f5f4 !important; /* stone-100 */
+  color: #1c1917 !important;
+  border-color: #e7e5e4 !important;
+}
+
+.theme-light input::placeholder {
+  color: #a8a29e !important; /* stone-400 */
+}
+
+.theme-light .bg-gradient-to-br.from-indigo-950\/60 {
+  background-image: linear-gradient(to bottom right, #f5f3ef, #fafaf9) !important;
+  border-color: #e7e5e4 !important;
+}
+
+.theme-light .bg-slate-950\/50 {
+  background-color: #f5f5f4 !important;
+}
+
+/* Handle custom active pills inside bottom navigation */
+.theme-light .bg-purple-500\/10 {
+  background-color: rgba(168, 85, 247, 0.08) !important;
+}
+
+.theme-light .border-purple-500\/15,
+.theme-light .border-purple-500\/20 {
+  border-color: rgba(168, 85, 247, 0.2) !important;
+}
+
+.theme-light .text-purple-400 {
+  color: #7c3aed !important; /* Violet-600 */
+}
+
+.theme-light .text-purple-300 {
+  color: #6d28d9 !important; /* Violet-700 */
+}
