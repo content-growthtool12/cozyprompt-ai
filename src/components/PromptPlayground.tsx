@@ -40,17 +40,15 @@ export const PromptPlayground: React.FC<PromptPlaygroundProps> = ({ prompt, onCo
     });
     return result;
   };
-console.log("Prompt:", prompt);
-console.log("Variables:", prompt.variables);
-console.log("Content:", prompt.content);
+
   const compiledPrompt = getCompiledPrompt();
 
   const handleCopy = () => {
-    navigator.clipboard.writeText(compiledPrompt);
-    setCopied(true);
-    onCopy(prompt.id);
-    setTimeout(() => setCopied(false), 2000);
-  };
+  navigator.clipboard.writeText(compiledPrompt);
+  setCopied(true);
+  onCopy(compiledPrompt);
+  setTimeout(() => setCopied(false), 2000);
+};
 
   const isConfigured = prompt.variables.some(v => (variableValues[v] || '').trim() !== '');
 

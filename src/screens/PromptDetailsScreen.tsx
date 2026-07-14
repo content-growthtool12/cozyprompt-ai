@@ -197,6 +197,7 @@ export const PromptDetailsScreen: React.FC<PromptDetailsScreenProps> = ({
       </div>
 
       {/* Share Tray Popup Overlay */}
+      console.log("showShare =", showShare);
       <AnimatePresence>
         {showShare && (
           <ShareModal prompt={prompt} onClose={() => setShowShare(false)} />
