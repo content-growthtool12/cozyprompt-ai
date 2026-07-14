@@ -70,7 +70,16 @@ useEffect(() => {
 
   // Live status bar time simulation
   const [currentTime, setCurrentTime] = useState('11:04 PM');
+useEffect(() => {
+  if (!isLoggedIn) return;
 
+  const promptId = new URLSearchParams(window.location.search).get("prompt");
+
+  if (promptId) {
+    setSelectedPromptId(promptId);
+    setCurrentScreen("prompt-details");
+  }
+}, [isLoggedIn]);
   // Effects to synchronize states to LocalStorage
   useEffect(() => {
     localStorage.setItem('cozy_isLoggedIn', String(isLoggedIn));
