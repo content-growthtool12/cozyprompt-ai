@@ -146,7 +146,14 @@ useEffect(() => {
   localStorage.setItem("cozy_isLoggedIn", "true");
 
   setIsLoggedIn(true);
+
+const promptId = new URLSearchParams(window.location.search).get("prompt");
+
+if (promptId) {
+  navigateTo("prompt-details", { promptId });
+} else {
   navigateTo("home");
+}
 };
 
 
