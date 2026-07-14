@@ -28,8 +28,9 @@ const handleCopyLink = async () => {
 
   switch (platform) {
     case "WhatsApp":
-      url = `https://wa.me/?text=${encodeURIComponent(text + " " + shareUrl)}`;
-      break;
+  url = `https://wa.me/?text=${encodeURIComponent(text + " " + shareUrl)}`;
+
+   break;
 
     case "X / Twitter":
       url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(shareUrl)}`;
@@ -119,7 +120,7 @@ window.open(url, "_blank");
   <button
     type="button"
     key={platform.name}
-    onClick={() => alert("WhatsApp button clicked")}
+    onClick={() => handleShareTo(platform.name)}
     className={`flex items-center gap-2.5 p-3 rounded-xl border text-left transition-all ${platform.color}`}
   >
       <div className="p-1.5 rounded-lg bg-slate-900 border border-slate-800">
